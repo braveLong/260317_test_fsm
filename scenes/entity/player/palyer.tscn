@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dx1yn4kjdrbl8" path="res://assets/Warrior_Blue.png" id="1_sqd48"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kqfa0"]
-radius = 24.083189
+radius = 16.0
 
 [sub_resource type="Animation" id="Animation_tpssc"]
 length = 0.001
@@ -192,6 +192,7 @@ hframes = 6
 vframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1314045649]
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_kqfa0")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1272253513]
