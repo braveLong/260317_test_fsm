@@ -10,6 +10,8 @@ enum State {
 @export_category("Status")
 @export var speed : int = 400
 @export var attack_speed : float = 0.6
+@export var attack_damage : int = 60
+@export var hitpoints : int = 150
 
 var state : State = State.IDLE
 var move_direction : Vector2 = Vector2.ZERO
@@ -17,6 +19,8 @@ var move_direction : Vector2 = Vector2.ZERO
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var animation_playback : AnimationNodeStateMachinePlayback = $AnimationTree["parameters/playback"]
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
+
 
 func _ready() -> void:
 	animation_tree.set_active(true)
@@ -25,7 +29,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		attack()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if not state == State.ATTACK:
 		movement_loop()
 
@@ -75,3 +79,14 @@ func attack() -> void:
 	# Return the player state after attack hased
 	await get_tree().create_timer(attack_speed).timeout
 	state = State.IDLE
+
+func take_damage(damage_taken : int) -> void:
+	hitpoints -= damage_taken
+	if hitpoints <= 0:
+		death()
+
+func death() -> void:
+	print("I died")
+
+func _on_hit_box_area_entered(area: Area2D) -> void:
+	area.owner.take_damage(attack_damage)
