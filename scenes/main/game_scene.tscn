@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cbujewgfoeefv"]
+
+[ext_resource type="PackedScene" uid="uid://crbb8lyqa3ops" path="res://scenes/tilemap.tscn" id="1_sdya7"]
+
+[node name="GameScene" type="Node2D" unique_id=533090972]
+
+[node name="tilemap" parent="." unique_id=1706874889 instance=ExtResource("1_sdya7")]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="260317_test_fsm"
-run/main_scene="uid://crbb8lyqa3ops"
+run/main_scene="uid://cbujewgfoeefv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [display]
