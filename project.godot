@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="260317_test_fsm"
-run/main_scene="uid://cbujewgfoeefv"
+run/main_scene="uid://bpxsn26dgvhe5"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[autoload]
+
+PlayerData="*uid://bi252wcnpwdj"
+LevelData="*uid://dhitaoek2wh2d"
 
 [display]
 
@@ -22,6 +27,7 @@ window/size/viewport_height=1080
 [global_group]
 
 player=""
+enemies=""
 
 [input]
 

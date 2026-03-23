@@ -12,7 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://c8my0v54ijweb" path="res://assets/Tiny Swords (Update 010)/Deco/12.png" id="10_exdk4"]
 [ext_resource type="Texture2D" uid="uid://b0ilavl1vhtej" path="res://assets/Tiny Swords (Update 010)/Deco/13.png" id="11_hpe7h"]
 [ext_resource type="Texture2D" uid="uid://dgq6ei2ulwhc5" path="res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe3.png" id="12_3j3d0"]
+[ext_resource type="Texture2D" uid="uid://bsdaq773dbfxa" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Meat/Sheep/Sheep_Idle.png" id="12_7xvlp"]
 [ext_resource type="Texture2D" uid="uid://bpgrv7f74cssu" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree1.png" id="13_4ar33"]
+[ext_resource type="Texture2D" uid="uid://c16ewjass4e4f" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Meat/Sheep/Sheep_Grass.png" id="14_06xgr"]
 [ext_resource type="Texture2D" uid="uid://b38nbe7de81k2" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree2.png" id="14_jvuvr"]
 [ext_resource type="Texture2D" uid="uid://ctheywib7nufv" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree3.png" id="15_u1rad"]
 [ext_resource type="Texture2D" uid="uid://dhbhbfjsdlmaw" path="res://assets/Tiny Swords (Update 010)/Deco/01.png" id="16_oftaf"]
@@ -73,6 +75,18 @@ texture = ExtResource("11_hpe7h")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg5oj"]
+texture = ExtResource("12_7xvlp")
+texture_region_size = Vector2i(128, 128)
+0:0/animation_speed = 8.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r35rt"]
 texture = ExtResource("12_3j3d0")
 texture_region_size = Vector2i(128, 128)
@@ -85,6 +99,24 @@ texture_region_size = Vector2i(128, 128)
 0:0/animation_frame_5/duration = 1.0
 0:0/animation_frame_6/duration = 1.0
 0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uovta"]
+texture = ExtResource("14_06xgr")
+texture_region_size = Vector2i(128, 128)
+0:0/animation_speed = 8.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/animation_frame_8/duration = 1.0
+0:0/animation_frame_9/duration = 1.0
+0:0/animation_frame_10/duration = 1.0
+0:0/animation_frame_11/duration = 1.0
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yg5v7"]
@@ -165,3 +197,5 @@ sources/15 = SubResource("TileSetAtlasSource_1nknh")
 sources/16 = SubResource("TileSetAtlasSource_7uvf2")
 sources/17 = SubResource("TileSetAtlasSource_1lh3d")
 sources/18 = SubResource("TileSetAtlasSource_x0owq")
+sources/19 = SubResource("TileSetAtlasSource_dg5oj")
+sources/20 = SubResource("TileSetAtlasSource_uovta")

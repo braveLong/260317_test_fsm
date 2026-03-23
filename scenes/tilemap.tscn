@@ -453,7 +453,7 @@ tile_set = SubResource("TileSet_0y0au")
 [node name="PropsPlateau" type="TileMapLayer" parent="." unique_id=1417132853]
 z_index = 1
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAPABAABAAAAAAAAAARAA8ABAAAAAAAAAARABEAAgAAAAAAAAATABEAAgAAAAAAAAAnAAYAAgAAAAAAAAAlAAYAAgAAAAAAAAAoAAUAAgAAAAAAAAAmAAUAAgAAAAAAAAApAAYABAAAAAAAAAArAAUABAAAAAAAAAAwAA4ABAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAPABAABAAAAAAAAAARAA8ABAAAAAAAAAARABEAAgAAAAAAAAATABEAAgAAAAAAAAAnAAYAAgAAAAAAAAAlAAYAAgAAAAAAAAAoAAUAAgAAAAAAAAAmAAUAAgAAAAAAAAApAAYABAAAAAAAAAArAAUABAAAAAAAAAAwAA4ABAAAAAAAAAATAA8AEwAAAAAAAAAUABAAFAAAAAAAAAA=")
 tile_set = ExtResource("6_18xon")
 
 [node name="Cloud" type="TileMapLayer" parent="." unique_id=399727272]
@@ -468,11 +468,32 @@ tile_set = SubResource("TileSet_f7w7e")
 [node name="Palyer" parent="." unique_id=106778611 instance=ExtResource("26_cltpc")]
 position = Vector2(705, 957)
 
-[node name="Enemys" type="Node2D" parent="." unique_id=1750141173]
+[node name="Enemies" type="Node2D" parent="." unique_id=1750141173]
 y_sort_enabled = true
 
-[node name="Enemy" parent="Enemys" unique_id=1414172133 instance=ExtResource("17_f7w7e")]
+[node name="Enemy" parent="Enemies" unique_id=1414172133 instance=ExtResource("17_f7w7e")]
 position = Vector2(1133, 584)
+
+[node name="Enemy2" parent="Enemies" unique_id=1062743754 instance=ExtResource("17_f7w7e")]
+position = Vector2(1710, 805)
+
+[node name="Enemy3" parent="Enemies" unique_id=2010422518 instance=ExtResource("17_f7w7e")]
+position = Vector2(1280, 393)
+
+[node name="Enemy4" parent="Enemies" unique_id=1558011042 instance=ExtResource("17_f7w7e")]
+position = Vector2(1591, 265)
+
+[node name="Enemy5" parent="Enemies" unique_id=271176896 instance=ExtResource("17_f7w7e")]
+position = Vector2(1439, 669)
+
+[node name="Enemy6" parent="Enemies" unique_id=1627285711 instance=ExtResource("17_f7w7e")]
+position = Vector2(745, 432)
+
+[node name="Enemy7" parent="Enemies" unique_id=1760743209 instance=ExtResource("17_f7w7e")]
+position = Vector2(617, 676)
+
+[node name="Enemy8" parent="Enemies" unique_id=1591987347 instance=ExtResource("17_f7w7e")]
+position = Vector2(1656, 1003)
 
 [node name="Effects" type="Node2D" parent="." unique_id=516986129]
 unique_name_in_owner = true
