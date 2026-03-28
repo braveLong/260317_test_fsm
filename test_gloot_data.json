@@ -1,0 +1,22 @@
+{
+	"melee_weapon": {
+		"weapon_type": "melee",
+		"damage": 1
+	},
+	"axe": {
+		"inherits": "melee_weapon",
+		"damage": 30,
+		"stack_size": 52,
+		"max_stack_size": 52,
+		"size": "Vector2i(2, 2)",
+		"image": "res://images/item_armour_silver.png",
+	},
+	"knife": {
+		"inherits": "melee_weapon",
+		"damage": 10,
+		"description": "A standard kitchen knife.",
+		"rotated": "true",
+		"size": "Vector2i(1, 1)",
+		"image": "res://images/item_book_blue.png",
+	}
+}
