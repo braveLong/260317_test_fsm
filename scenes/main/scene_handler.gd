@@ -4,11 +4,14 @@ extends Node
 @export var game_scene_packed: PackedScene
 
 func _ready() -> void:
+	PlayerData.load_player_data_json()
 	load_main_menu("game_start")
 
 func load_main_menu(origin: String) -> void:
 	if origin == "end_game_screen":
 		get_node("GameScene").queue_free()
+		PlayerData.save_player_data_json()
+		PlayerData.save_player_data_binary()
 	var main_menu: Control = main_menu_packed.instantiate()
 	main_menu.new_game_pressed.connect(new_game)
 	main_menu.settings_pressed.connect(settings_open)

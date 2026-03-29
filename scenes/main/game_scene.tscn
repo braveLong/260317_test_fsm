@@ -7,9 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dw3778m7aaaw4" path="res://assets/Carved_3Slides.png" id="4_yaarb"]
 [ext_resource type="Texture2D" uid="uid://o384mxtkphs0" path="res://assets/Banner_Connection_Up.png" id="5_ynmmy"]
 [ext_resource type="FontFile" uid="uid://522najl4dn30" path="res://assets/PirataOne-Regular.ttf" id="6_o41ig"]
-[ext_resource type="Script" uid="uid://5hfig5q3x8it" path="res://addons/gloot/core/inventory.gd" id="8_tj35g"]
-[ext_resource type="JSON" path="res://test_gloot_data.json" id="9_jck2h"]
-[ext_resource type="Script" uid="uid://b8hbvp4kl88cn" path="res://addons/gloot/core/constraints/grid_constraint.gd" id="10_jck2h"]
 
 [node name="GameScene" type="Node2D" unique_id=533090972]
 script = ExtResource("1_rfwcf")
@@ -80,34 +77,3 @@ theme_override_font_sizes/font_size = 60
 text = "-"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Inventory" type="Node" parent="UI/HUD" unique_id=935285706]
-script = ExtResource("8_tj35g")
-protoset = ExtResource("9_jck2h")
-_serialized_format = {
-"constraints": {
-"res://addons/gloot/core/constraints/grid_constraint.gd": {
-"data": {
-"item_positions": {
-"1": "Vector2i(2, 0)"
-},
-"size": "Vector2i(10, 10)"
-},
-"name": &"GridConstraint"
-}
-},
-"items": [{
-"protoset": "res://test_gloot_data.json",
-"prototype_id": "axe"
-}, {
-"protoset": "res://test_gloot_data.json",
-"prototype_id": "knife"
-}],
-"node_name": "Inventory",
-"protoset": "res://test_gloot_data.json"
-}
-metadata/_custom_type_script = "uid://5hfig5q3x8it"
-
-[node name="GridConstraint" type="Node" parent="UI/HUD/Inventory" unique_id=1608858771]
-script = ExtResource("10_jck2h")
-metadata/_custom_type_script = "uid://b8hbvp4kl88cn"

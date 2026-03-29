@@ -1,0 +1,22 @@
+[gd_resource type="InventoryDatabase" format=3 uid="uid://1mjqoqa8u4nl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5g3h8"]
+load_path = "res://.godot/imported/UI_TravelBook_IconTick01a.png-44dd92a0263ec90cb3b7a78f03cb7611.ctex"
+
+[sub_resource type="ItemDefinition" id="ItemDefinition_5g3h8"]
+id = "wood"
+max_stack = 16
+name = "wood"
+icon = SubResource("CompressedTexture2D_5g3h8")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2urww"]
+load_path = "res://.godot/imported/UI_TravelBook_IconStar01a.png-f30b34d107bf46af8dc076cf1f9a5309.ctex"
+
+[sub_resource type="ItemDefinition" id="ItemDefinition_2urww"]
+id = "star"
+max_stack = 5
+name = "star"
+icon = SubResource("CompressedTexture2D_2urww")
+
+[resource]
+items = Array[ItemDefinition]([SubResource("ItemDefinition_5g3h8"), SubResource("ItemDefinition_2urww")])

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://byklcpcs85dxo"]
+
+[ext_resource type="InventoryDatabase" uid="uid://1mjqoqa8u4nl" path="res://test_inventory_system/test.tres" id="1_msxxs"]
+[ext_resource type="Script" uid="uid://b1ry3jgjjf8rp" path="res://test_inventory_system/inventory_test.gd" id="2_1wnvo"]
+[ext_resource type="Script" uid="uid://du4odj2yajra2" path="res://addons/inventory-system-demos/simple-transfer/simple_inventory_ui.gd" id="3_bccjy"]
+
+[sub_resource type="ItemStack" id="ItemStack_bccjy"]
+item_id = "wood"
+amount = 2
+
+[sub_resource type="ItemStack" id="ItemStack_4jymm"]
+item_id = "star"
+amount = 3
+
+[node name="Node2D" type="Node2D" unique_id=1383267749]
+script = ExtResource("2_1wnvo")
+
+[node name="Inventory" type="Inventory" parent="." unique_id=1556882443]
+stacks = Array[ItemStack]([SubResource("ItemStack_bccjy")])
+database = ExtResource("1_msxxs")
+
+[node name="OtherInventory" type="Inventory" parent="." unique_id=694252577]
+stacks = Array[ItemStack]([SubResource("ItemStack_4jymm")])
+database = ExtResource("1_msxxs")
+
+[node name="Control" type="Control" parent="." unique_id=994611229]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=392677373]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/CanvasLayer" unique_id=290553764]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SimpleInventoryUI" type="ItemList" parent="Control/CanvasLayer/HBoxContainer" unique_id=1116421242 node_paths=PackedStringArray("inventory")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("3_bccjy")
+inventory = NodePath("../../../../Inventory")
+metadata/_custom_type_script = "uid://du4odj2yajra2"
+
+[node name="ButtonLeft" type="Button" parent="Control/CanvasLayer/HBoxContainer" unique_id=1010417543]
+layout_mode = 2
+text = ">>>"
+
+[node name="ButtonRight" type="Button" parent="Control/CanvasLayer/HBoxContainer" unique_id=796241807]
+layout_mode = 2
+text = "<<<"
+
+[node name="OtherSimpleInventoryUI" type="ItemList" parent="Control/CanvasLayer/HBoxContainer" unique_id=2146139325 node_paths=PackedStringArray("inventory")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("3_bccjy")
+inventory = NodePath("../../../../OtherInventory")
+metadata/_custom_type_script = "uid://du4odj2yajra2"
+
+[connection signal="button_down" from="Control/CanvasLayer/HBoxContainer/ButtonLeft" to="." method="_on_button_left_button_down"]
+[connection signal="button_down" from="Control/CanvasLayer/HBoxContainer/ButtonRight" to="." method="_on_button_right_button_down"]
